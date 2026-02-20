@@ -78,3 +78,15 @@ https://seoul-bike-sharing-flask-app.onrender.com
 ## 📸 Application Preview
 
 ![Bike Sharing Prediction App](app_screenshot.png)
+
+## 📌 Project Overview
+
+An end-to-end Machine Learning project that predicts bike rental demand in Seoul using weather and calendar features, deployed as a Flask web application.
+
+## Dataset
+
+Dataset: Seoul Bike Sharing Demand Dataset
+
+## Note
+
+Note: App hosted on Render free tier. First load may take ~30 seconds.
