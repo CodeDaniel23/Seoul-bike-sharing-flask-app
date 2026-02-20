@@ -90,3 +90,6 @@ Dataset: Seoul Bike Sharing Demand Dataset
 ## Note
 
 Note: App hosted on Render free tier. First load may take ~30 seconds.
+
+## 👤 Author
+White | GitHub: CodeDaniel23
