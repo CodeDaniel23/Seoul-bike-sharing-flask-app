@@ -70,3 +70,11 @@ Categorical feature handling using OneHotEncoder
 Clean Flask-based web interface
 
 Deployment-ready structure
+
+## 🌐 Live Demo
+
+https://seoul-bike-sharing-flask-app.onrender.com
+
+## 📸 Application Preview
+
+![Bike Sharing Prediction App](app_screenshot.png)
