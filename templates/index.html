@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bike sharing Prediction</title>
+        <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-size: contain;
+            background-image: url("{{ url_for('static', filename='image.jpg') }}");
+            background-position:bottom;   
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding-top: 20px;
+        }    
+
+        .container {
+            background: rgba(179, 232, 200, 0.9);
+            padding: 12px;         
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            width: 350px;           
+            text-align: center;
+    
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* two columns */
+            gap: 8px;
+        }
+
+        form button {
+            grid-column: span 2; /* button full width */
+        }
+
+        select {
+            width: 177px;     
+            padding: 5px;
+            margin: 4px 0;
+        }
+        input{
+            width: 163px;     
+            padding: 5px;
+            margin: 0px 0;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 350px; 
+            padding:5px ;
+            
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container"><h2>Bike Sharing Prediction</h2>
+<form action="/predict" method="post">
+
+Hour:
+<input type="number" name="hour" required>
+
+Temperature:
+<input type="number" step="any" name="temperature" required>
+
+Humidity:
+<input type="number" step="any" name="humidity" required>
+
+wind Speed:
+<input type="number" step="any" name="wind_speed" required>
+
+Visibility:
+<input type="number" step="any" name="visibility" required>
+
+Solar Radiation:
+<input type="number" step="any" name="solar_radiation" required>
+
+Rain Fall:
+<input type="number" step="any" name="rain_fall" required>
+
+Snow Fall:
+<input type="number" step="any" name="snow_fall" required>
+
+Seasons:
+<select name="seasons">
+    <option value="Winter">Winter</option>
+    <option value="Spring">Spring</option>
+    <option value="Summer">Summer</option>
+    <option value="Autumn">Autumn</option>
+</select>
+
+Holidays:
+<select name="holidays">
+    <option value="Holiday">Holiday</option>
+    <option value="No Holiday">No Holiday</option>
+</select>
+
+Functioning Day:
+<select name="functioning_day">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select>
+
+Year:
+<input type="number" name="year" >
+
+Month:
+<input type="number" name="month" >
+
+Day:
+<input type="number" name="day">
+
+Weekday:
+<input type="number" name="week_day">
+
+<button type="submit">Predict</button>
+
+</form>
+
+<h3>{{prediction_text}}</h3>
+
+</div>
+</body>
+</html>
